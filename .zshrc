@@ -11,8 +11,6 @@ alias flutter="fvm flutter"
 alias pm="pnpm"
 alias px="pnpm dlx"
 
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="/Users/konoreiji/.bun/bin:$PATH"
 
 source <(fzf --zsh)
@@ -31,3 +29,6 @@ fi
 if [ -f ~/.aliases ]; then
   source ~/.aliases
 fi
+
+# 他の PATH 変更より後に置き、mise 管理のツールを優先させる
+eval "$(mise activate zsh)"
